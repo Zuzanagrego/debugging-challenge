@@ -20,28 +20,29 @@ Expected Result:
 => No skating today.
 */
 
-let readyToSkate = false;
+let readyToSkate1 = false;
+let readyToSkate2 = false;
 let energyLevel = 18000;
 let crewStatus = true;
 let cameraBattery = "green";
 
 if (energyLevel >= 24000) {
    console.log("Energy level is a go!");
-   readyToSkate = true;
+   readyToSkate1 = true;
 } else {
    console.log("WARNING: Insufficient energy!");
-   readyToSkate = false;
+   readyToSkate1 = false;
 }
 
 if (crewStatus && cameraBattery === "green"){
    console.log("Crew & cameraBattery is a go!");
-   readyToSkate = true;
+   readyToSkate2 = true;
 } else {
    console.log("WARNING: Crew or cameraBattery not ready!");
-   readyToSkate = false;
+   readyToSkate2 = false;
 }
 
-if (readyToSkate) {
+if (readyToSkate1 && readyToSkate2) {
    console.log("Let's goooooo!");
    console.log("Time to skate!");
 } else {
